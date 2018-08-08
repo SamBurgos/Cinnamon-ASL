@@ -15,8 +15,8 @@ function MyApplet(metadata, orientation, panel_height, instance_id) {
 MyApplet.prototype = {
     __proto__: Applet.IconApplet.prototype,
 
-    _init: function(orientation, panel_height, instance_id) {
-        Applet.IconApplet.prototype._init.call(this, orientation, panel_height, instance_id);
+    _init: function(orientation, paneHeight, instance_id) {
+        Applet.IconApplet.prototype._init.call(this, orientation, panelHeight, instance_id);
 
         this.set_applet_icon_path(ICON);
         this.set_applet_tooltip(_("American Sign Language"));
@@ -27,7 +27,7 @@ MyApplet.prototype = {
     }*/
 };
 
-function main(metadata, orientation, panel_height, instance_id) {
-    let myApplet = new MyApplet(metadata, orientation, panel_height, instance_id);
+function main(metadata, orientation, panelHeight, instance_id) {
+    let myApplet = new MyApplet(metadata, orientation, panelHeight, instance_id);
     return myApplet;
 }

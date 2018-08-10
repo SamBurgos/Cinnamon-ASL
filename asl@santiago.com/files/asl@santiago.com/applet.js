@@ -44,30 +44,56 @@ MyApplet.prototype = {
         });
         this.menu.addMenuItem(menuitem);
 
-        menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
+        /*menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
         menuitem.connect('activate', () => {
             Util.spawn_async(["xdg-open", "firefox", website], null);
         });
-        this.menu.addMenuItem(menuitem);
+        this.menu.addMenuItem(menuitem);*/
 
-        let subMenu = new PopupMenu.PopupSubMenuMenuItem("Troubleshoot");
+        //Submenu 1: Abecedario ASL
+        let subMenu1 = new PopupMenu.PopupSubMenuMenuItem("Troubleshoot");
         // Add sub-menu to applet menu
-        this.menu.addMenuItem(subMenu);
+        this.menu.addMenuItem(subMenu1);
 
         // First sub-menu item.
-        subMenu.menu.addAction("Restart Cinnamon", () => {
+        subMenu1.menu.addAction("Restart Cinnamon", () => {
             global.reexec_self();
         });
 
         // Second sub-menu item.
-        subMenu.menu.addAction("Do whatever", () => {
+        subMenu1.menu.addAction("Do whatever", () => {
             Main.notify("Title", "Message body.");
         });
         this.menu.addMenuItem(menuitem);
 
         // Third sub-menu item
         menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
-        subMenu.menu.addMenuItem(menuitem);
+        subMenu1.menu.addMenuItem(menuitem);
+        //Fin de submenu 1
+
+        //Submenu 2: Colores ASL
+        let subMenu2 = new PopupMenu.PopupSubMenuMenuItem("Troubleshoot");
+        // Add sub-menu to applet menu
+        this.menu.addMenuItem(subMenu2);
+
+        // First sub-menu item.
+        subMenu2.menu.addAction("Restart Cinnamon", () => {
+            global.reexec_self();
+        });
+
+        // Second sub-menu item.
+        subMenu2.menu.addAction("Do whatever", () => {
+            Main.notify("Title", "Message body.");
+        });
+        this.menu.addMenuItem(menuitem);
+
+        // Third sub-menu item
+        menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
+        subMenu2.menu.addMenuItem(menuitem);
+        //Fin de submenu 2
+
+
+
     },
 
     on_applet_clicked: function(event) {

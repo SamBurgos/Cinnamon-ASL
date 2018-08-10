@@ -1,61 +1,81 @@
 const Applet = imports.ui.applet;
 const Util = imports.misc.util;
-const GLib = imports.gi.GLib;
-const Tooltips = imports.ui.tooltips;
 const St = imports.gi.St;
 const PopupMenu = imports.ui.popupMenu;
-const UUID = "asl@santiago.com";
+const Main = imports.ui.main;
 
+const website = "https://www.handspeak.com/";
 
-const APPLET_PATH = global.userdatadir + "/applets/" + UUID;
-const ICON = APPLET_PATH + "/icon.png";
-const web = "https://www.handspeak.com/";
-
-function MyApplet(metadata, orientation, panelHeight, instance_id) {
-    this._init(metadata, orientation, panelHeight, instance_id);
+function MyApplet() {
+    this._init.apply(this, arguments);
 }
 
 MyApplet.prototype = {
     __proto__: Applet.IconApplet.prototype,
 
-    _init: function(orientation, panelHeight, instanceId) {
-        Applet.IconApplet.prototype._init.call(this, orientation, panelHeight, instanceId);
+    _init: function(metadata, orientation, panelHeight, instance_id) {
+        Applet.IconApplet.prototype._init.call(this, orientation, panelHeight, instance_id);
 
-        try
-        {
+        try {
+            this.set_applet_icon_path(metadata.path + "/icon.png");
+            this.set_applet_tooltip(_("American Sign Language"));
 
+            //Initializing options on the Popup menu
+            this.menuManager = new PopupMenu.PopupMenuManager(this);
+            this.menu = new Applet.AppletPopupMenu(this, orientation);
+            this.menuManager.addMenu(this.menu);
 
-          this.set_applet_icon_path(ICON);
-          //this.set_applet_tooltip(_("American Sign Language"));
-
-        	//Initializing options on the Popup menu
-        	this.menuManager = new PopupMenu.PopupMenuManager(this);
-			    this.menu = new Applet.AppletPopupMenu(this, orientation);
-			    this.menuManager.addMenu(this.menu);
-
-			    //Adding items to the Popup Menu
-			    let item = new PopupMenu.PopupIconMenuItem("Abecedario", "send-to", St.IconType.SYMBOLIC);
-			    this.menu.addMenuItem(item);
-
-			    item = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
-			    this.menu.addMenuItem(item);
-
-        }
-
-        catch(e)
-        {
-        	global.logError(e);
+            this.populate_menu();
+        } catch (e) {
+            global.logError(e);
         }
 
     },
 
+    populate_menu: function() {
+        //Adding items to the Popup Menu
+        let menuitem = new PopupMenu.PopupIconMenuItem(
+            "Abecedario",
+            "send-to",
+            St.IconType.SYMBOLIC
+        );
+        menuitem.connect("activate", () => {
+            Main.notify("Abecedario", "Abecedario message body.");
+        });
+        this.menu.addMenuItem(menuitem);
+
+        menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
+        menuitem.connect('activate', () => {
+            Util.spawn_async(["xdg-open", "firefox", website], null);
+        });
+        this.menu.addMenuItem(menuitem);
+
+        let subMenu = new PopupMenu.PopupSubMenuMenuItem("Troubleshoot");
+        // Add sub-menu to applet menu
+        this.menu.addMenuItem(subMenu);
+
+        // First sub-menu item.
+        subMenu.menu.addAction("Restart Cinnamon", () => {
+            global.reexec_self();
+        });
+
+        // Second sub-menu item.
+        subMenu.menu.addAction("Do whatever", () => {
+            Main.notify("Title", "Message body.");
+        });
+        this.menu.addMenuItem(menuitem);
+
+        // Third sub-menu item
+        menuitem = new PopupMenu.PopupIconMenuItem("Colores", "send-to", St.IconType.SYMBOLIC);
+        subMenu.menu.addMenuItem(menuitem);
+    },
+
     on_applet_clicked: function(event) {
-        //this.menu.toggle();
-        Util.spawnCommandLine("xdg-open https://www.youtube.com/");
+        this.menu.toggle();
+        //Util.spawnCommandLine("xdg-open " + web);
     }
 };
 
 function main(metadata, orientation, panelHeight, instance_id) {
-    let myApplet = new MyApplet(metadata, orientation, panelHeight, instance_id);
-    return myApplet;
+    return new MyApplet(metadata, orientation, panelHeight, instance_id);
 }

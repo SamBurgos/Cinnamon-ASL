@@ -45,233 +45,166 @@ MyApplet.prototype = {
             this.AbecedarioASLItem = new PopupMenu.PopupSubMenuMenuItem(_("Abecedario"));
 
             //Item 1 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra A", () => {
-            Main.notify("Title", "Letra A en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra A"), () => {
+            //Main.notify(_("A - ASL", "Letra A en ASL"));
+            Main.notify(_("A - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2460'], null);
             });
 
             //Item 2 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra B", () => {
-            Main.notify("Title", "Letra B en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra B"), () => {
+            Main.notify(_("B - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2461'], null);
             });
 
             //Item 3 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra C", () => {
-            Main.notify("Title", "Letra C en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra C"), () => {
+            Main.notify(_("C - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2462'], null);
             });
 
             //Item 4 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra D", () => {
-            Main.notify("Title", "Letra D en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra D"), () => {
+            Main.notify(_("D - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2463'], null);
             });
 
             //Item 5 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra E", () => {
-            Main.notify("Title", "Letra E en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra E"), () => {
+            Main.notify(_("E - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2464'], null);
             });
 
             //Item 6 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra F", () => {
-            Main.notify("Title", "Letra F en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra F"), () => {
+            Main.notify(_("F - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2465'], null);
             });
 
             //Item 7 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra G", () => {
-            Main.notify("Title", "Letra G en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra G"), () => {
+            Main.notify(_("G - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2466'], null);
             });
 
             //Item 8 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra H", () => {
-            Main.notify("Title", "Letra H en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra H"), () => {
+            Main.notify(_("H - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2467'], null);
             });
 
             //Item 9 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra I", () => {
-            Main.notify("Title", "Letra I en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra I"), () => {
+            Main.notify(_("I - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2468'], null);
             });
 
             //Item 10 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra J", () => {
-            Main.notify("Title", "Letra J en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra J"), () => {
+            Main.notify(_("J - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2469'], null);
             });
 
             //Item 11 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra K", () => {
-            Main.notify("Title", "Letra K en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra K"), () => {
+            Main.notify(_("K - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2470'], null);
             });
 
             //Item 12 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra L", () => {
-            Main.notify("Title", "Letra L en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra L"), () => {
+            Main.notify(_("L - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2471'], null);
             });
 
             //Item 13 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra M", () => {
-            Main.notify("Title", "Letra M en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra M"), () => {
+            Main.notify(_("M - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2472'], null);
             });
 
             //Item 14 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra N", () => {
-            Main.notify("Title", "Letra N en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra N"), () => {
+            Main.notify(_("N - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2473'], null);
             });
 
             //Item 15 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra O", () => {
-            Main.notify("Title", "Letra O en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra O"), () => {
+            Main.notify(_("O - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2474'], null);
             });
 
             //Item 16 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra P", () => {
-            Main.notify("Title", "Letra P en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra P"), () => {
+            Main.notify(_("P - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2475'], null);
             });
 
             //Item 17 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra Q", () => {
-            Main.notify("Title", "Letra Q en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra Q"), () => {
+            Main.notify(_("Q - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2476'], null);
             });
 
             //Item 18 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra R", () => {
-            Main.notify("Title", "Letra R en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra R"), () => {
+            Main.notify(_("R - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2477'], null);
             });
 
             //Item 19 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra S", () => {
-            Main.notify("Title", "Letra S en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra S"), () => {
+            Main.notify(_("S - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2478'], null);
             });
 
             //Item 20 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra T", () => {
-            Main.notify("Title", "Letra T en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra T"), () => {
+            Main.notify(_("T - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2479'], null);
             });
 
             //Item 21 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra U", () => {
-            Main.notify("Title", "Letra U en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra U"), () => {
+            Main.notify(_("U - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2480'], null);
             });
 
             //Item 22 Submenu 11
-            this.AbecedarioASLItem.menu.addAction("Letra V", () => {
-            Main.notify("Title", "Letra V en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra V"), () => {
+            Main.notify(_("V - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2481'], null);
             });
 
             //Item 23 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra W", () => {
-            Main.notify("Title", "Letra W en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra W"), () => {
+            Main.notify(_("W - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2482'], null);
             });
 
             //Item 24 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra X", () => {
-            Main.notify("Title", "Letra X en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra X"), () => {
+            Main.notify(_("X - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2483'], null);
             });
 
             //Item 25 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra Y", () => {
-            Main.notify("Title", "Letra Y en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra Y"), () => {
+            Main.notify(_("Y - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2484'], null);
             });
 
             //Item 26 Submenu 1
-            this.AbecedarioASLItem.menu.addAction("Letra Z", () => {
-            Main.notify("Title", "Letra Z en ASL");
+            this.AbecedarioASLItem.menu.addAction(_("Letra Z"), () => {
+            Main.notify(_("Z - ASL"));
+            Util.spawn_async(["xdg-open", website + 'word/search/index.php?id=2485'], null);
             });
 
             this.menu.addMenuItem(this.AbecedarioASLItem); //Add the menu with the items created
             //***********************************************************************************************
 
-            //Submenú 2: Números cardinales en ASL
-            //***********************************************************************************************
-            this.NumCardinalesASLItem = new PopupMenu.PopupSubMenuMenuItem(_("Números cardinales"));
-
-            //Item 1 Submenu 2
-            this.NumCardinalesASLItem.menu.addAction("Número 1", () => {
-            Main.notify("Title", "Número 1 en ASL");
-            });
-
-            //Item 2 Submenu 2
-            this.NumCardinalesASLItem.menu.addAction("Número 2", () => {
-            Main.notify("Title", "Número 2 en ASL");
-            });
-
-            //Item 3 Submenu 2
-            this.NumCardinalesASLItem.menu.addAction("Número 3", () => {
-            Main.notify("Title", "Número 3 en ASL");
-            });
-
-            
-
-            this.menu.addMenuItem(this.NumCardinalesASLItem); //Add the menu with the items created
-            //***********************************************************************************************
-
-            //Submenú 3: Números ordinales en ASL
-            //***********************************************************************************************
-            this.NumOrdinalesASLItem = new PopupMenu.PopupSubMenuMenuItem(_("Números ordinales"));
-
-            //Item 1 Submenu 3
-            this.NumOrdinalesASLItem.menu.addAction("Número 1", () => {
-            Main.notify("Title", "Número 1 en ASL");
-            });
-
-            //Item 2 Submenu 3
-            this.NumOrdinalesASLItem.menu.addAction("Número 2", () => {
-            Main.notify("Title", "Número 2 en ASL");
-            });
-
-            //Item 3 Submenu 3
-            this.NumOrdinalesASLItem.menu.addAction("Número 3", () => {
-            Main.notify("Title", "Número 3 en ASL");
-            });
-
-            
-
-            this.menu.addMenuItem(this.NumOrdinalesASLItem); //Add the menu with the items created
-            //***********************************************************************************************            
-
-            //Submenú 4: Vestimenta en ASL
-            //***********************************************************************************************
-            this.VestimentaASLItem = new PopupMenu.PopupSubMenuMenuItem(_("Vestimenta"));
-            //this.
-
-            //Item 1 Submenu 3
-            this.VestimentaASLItem.menu.addAction("Camisa", () => {
-            Main.notify("Title", "Número 1 en ASL");
-            });
-
-            //Item 2 Submenu 3
-            this.VestimentaASLItem.menu.addAction("Blusa", () => {
-            Main.notify("Title", "Número 2 en ASL");
-            });
-
-            //Item 3 Submenu 3
-            this.VestimentaASLItem.menu.addAction("Pantalón", () => {
-            Main.notify("Title", "Número 3 en ASL");
-            });
-
-            
-
-            this.menu.addMenuItem(this.VestimentaASLItem); //Add the menu with the items created
-            //***********************************************************************************************
-
-            //Submenú Nth: Miscelánea; palabras que no tengan categoría definida, mas de una categoría
-            //o que se manejen de manera diferente 
-            //***********************************************************************************************
-            this.RandomASLItem = new PopupMenu.PopupSubMenuMenuItem(_("Miscelánea"));
-            
-
-            this.RandomASLItem.menu.addAction("Camisa", () => {
-            Main.notify("Title", "Número 1 en ASL");
-            });
-
-            this.RandomASLItem.menu.addAction("Blusa", () => {
-            Main.notify("Title", "Número 2 en ASL");
-            });
-
-            this.RandomASLItem.menu.addAction("Pantalón", () => {
-            Main.notify("Title", "Número 3 en ASL");
-            });
-
-            
-
-            this.menu.addMenuItem(this.RandomASLItem); //Add the menu with the items created
-            //***********************************************************************************************
+            this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
             //Access this website to check more vocabulary
             let websiteASL = new PopupMenu.PopupIconMenuItem(
@@ -285,9 +218,6 @@ MyApplet.prototype = {
             });
 
             this.menu.addMenuItem(websiteASL);
-
-
-
 
     },
 

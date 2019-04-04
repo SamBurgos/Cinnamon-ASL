@@ -27,9 +27,11 @@ This cinnamon applet shows the vocabulary of American Sign Language (commonly kn
 
 Agradecimientos a/Acknowledge to:
 
-| Español                                 | English                                  | URL                                      |
-|-----------------------------------------|------------------------------------------|------------------------------------------|
-| Icons8 por el juego de íconos           | Icons8 for the icon set                  | https://icons8.com                       |
-| Fundación Manos Mágicas                 | Foundation "Manos Mágicas" El Salvador   | http://www.fundacionmanosmagicas.com/    |
-| Becky Soundy (mi mentora e inspiración) | Becky Soundy (my mentor and inspiration) | https://www.youtube.com/user/BeckySoundy |
-| Equipo de Linux Mint por los xlets      | Linux Mint team for xlets development    | https://github.com/linuxmint             |
+| Español                                          | English                                            | URL                                            |
+|--------------------------------------------------|----------------------------------------------------|------------------------------------------------|
+| Icons8 por el juego de íconos                    | Icons8 for the icon set                            | https://icons8.com                             |
+| Fundación Manos Mágicas                          | Foundation "Manos Mágicas" El Salvador             | http://www.fundacionmanosmagicas.com/          |
+| Becky Soundy (mi inspiración para el proyecto)   | Becky Soundy (my inspiration for this project)     | https://www.youtube.com/user/BeckySoundy       |
+| Camila Soundy (mi otra inspiración y mi mentora) | Camila Soundy (my other inspiration and my mentor) | https://www.facebook.com/CamilaSoundySmartCity |
+| Equipo de Linux Mint por los xlets               | Linux Mint team for xlets development              | https://github.com/linuxmint                   |
+| Sitio de Handspeak por la bibliografía           | Handspeak website for bibliography                 | https://www.handspeak.com/                     |
